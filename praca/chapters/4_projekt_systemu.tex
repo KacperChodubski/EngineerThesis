@@ -1,0 +1,87 @@
+\chapter{PROJEKT SYSTEMU}
+
+To jest rozdział. Tu należy umieścić kilkuzdaniowe wprowadzenie do rozdziału.
+
+
+
+
+\section{Interfejs gry}
+
+To jest podrozdział.
+
+\subsection{Podpodrozdział}
+
+To jest podpodrozdział.
+
+\subsubsection{Podpodpodrozdział}
+
+To jest podpodpodrozdział. On nie jest domyślnie numerowany i nie występuje w spisie treści.
+
+\paragraph{Paragraf}
+
+A to jest paragraf. On również nie jest domyślnie numerowany i nie występuje w spisie treści.
+
+
+
+
+\section{Architektura serwera i warstwy logicznej}
+
+\subsection{Agenci}
+
+\subsubsection{Pamięć agentów}
+Pamięć agentów jest kluczowym elementem ich funkcjonowania.
+To dzięki niej agenci reagują w sposób bardziej ludzki.
+
+\paragraph{Architektura pamięci agentów}
+Pamięć opiera się na modelu języka naturalnego typu encoder, który przekształca
+nowe wspomnienia agenta na wektor. Później, w trakcie interakcji czy budowania nowych
+wspomnień przez agenta jest wybierane k wspomnień, które uzyskały największą średnią
+ważoną z trzech metryk: podobieństwa (relevance), ważności (importance) i niedawności (recency).
+Wybrane wspomnienia są później przekazywane do modelu językowego typu decoder, który na
+podstawie ich i danego wydarzenia decyduje o zachowaniu agenta.
+
+\paragraph{Metryka podobieństwa}
+Metryka podobieństwa odpowiada podobieństwu tematycznemu nowego wydarzenia do
+wydarzenia zapisanego w pamięci agenta. Jest to uzyskiwane za pomocą obliczonej
+odległości cosinusowej wektorów stworzonych przez model typu encoder.
+
+\paragraph{Metryka ważności}
+Metryka istoty jest uzyskiwana
+poprzez ocenę ważności danego wydarzenia w kontekście życia agenta przez LLM.
+Metryka odpowiada na pytanie jak ważne dla danego agenta w skali od 1 do 10 jest
+dane wydarzenie np. pościelenie łóżka będzie miało skalę bliską 1, gdzie wzięcie
+ślubu skalę bliską 10.
+
+\paragraph{Metryka niedawności}
+Metryka niedawności odpowiada mechanizmowi "zapominania" przez agenta.
+Wspomnienia uzyskują wynik zgodnie ze wzorem:
+
+\begin{equation}
+	score = max\_score * decay\_factor ^ {time\_diff}
+\end{equation}
+
+
+
+
+\section{Komendy dla modeli językowych}
+
+Jakość odpowiedzi generowanych przez duże modele językowe w znacznym stopniu zależy od zapytań, które są do nich wysyłane. Tekst przekazywany do modelu nazywany jest komendą (ang. \textit{prompt}), której główną częścią jest pytanie lub polecenie opisujące, co model powinien wykonać. W przypadku techniki RAG w skład komendy wchodzi także kontekst, czyli tekst ukazujący szerszą perspektywę danego tematu. W samym poleceniu zawarta jest także informacja dla modelu, aby ten, podczas odpowiadania na pytanie lub wykonywania postawionego mu zadania, korzystał bezpośrednio z dostarczonego mu kontekstu - jeżeli jakaś informacja w nim nie występuje, model powinien jasno zakomunikować, że nie jest w stanie odpowiedzieć na pytanie. Nie powinien próbować wymyślać odpowiedzi jedynie na podstawie własnej wiedzy.
+
+
+
+
+\section{Komunikacja między serwisami}
+
+To jest podrozdział.
+
+\subsection{Podpodrozdział}
+
+To jest podpodrozdział.
+
+\subsubsection{Podpodpodrozdział}
+
+To jest podpodpodrozdział. On nie jest domyślnie numerowany i nie występuje w spisie treści.
+
+\paragraph{Paragraf}
+
+A to jest paragraf. On również nie jest domyślnie numerowany i nie występuje w spisie treści.
