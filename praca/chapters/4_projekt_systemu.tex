@@ -26,13 +26,13 @@ A to jest paragraf. On również nie jest domyślnie numerowany i nie występuje
 
 \section{Architektura serwera i warstwy logicznej}
 
-\subsection{Agenci}
+\section{Agenci}
 
-\subsubsection{Pamięć agentów}
+\subsection{Pamięć agentów}
 Pamięć agentów jest kluczowym elementem ich funkcjonowania.
 To dzięki niej agenci reagują w sposób bardziej ludzki.
 
-\paragraph{Architektura pamięci agentów}
+\subsection*{Architektura pamięci agentów}
 Pamięć opiera się na modelu języka naturalnego typu encoder, który przekształca
 nowe wspomnienia agenta na wektor. Później, w trakcie interakcji czy budowania nowych
 wspomnień przez agenta jest wybierane k wspomnień, które uzyskały największą średnią
@@ -40,12 +40,12 @@ ważoną z trzech metryk: podobieństwa (relevance), ważności (importance) i n
 Wybrane wspomnienia są później przekazywane do modelu językowego typu decoder, który na
 podstawie ich i danego wydarzenia decyduje o zachowaniu agenta.
 
-\paragraph{Metryka podobieństwa}
+\subsection*{Metryka podobieństwa}
 Metryka podobieństwa odpowiada podobieństwu tematycznemu nowego wydarzenia do
 wydarzenia zapisanego w pamięci agenta. Jest to uzyskiwane za pomocą obliczonej
 odległości cosinusowej wektorów stworzonych przez model typu encoder.
 
-\paragraph{Metryka ważności}
+\subsection*{Metryka ważności}
 Metryka istoty jest uzyskiwana
 poprzez ocenę ważności danego wydarzenia w kontekście życia agenta przez LLM.
 Metryka odpowiada na pytanie jak ważne dla danego agenta w skali od 1 do 10 jest
