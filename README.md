@@ -120,7 +120,7 @@ W bibliography.bib umieszczamy definicję źródła. Jeśli dostęp był interne
 - Umieszczamy w pracy jako rysunki.
 - draw.io
   - zaokrąglone prostokąty
-  - główny kolor: niebieski (z tych sugerowanych styli)
+  - główny kolor: biały
   - na białym tle
 
-![Przykład schematu](diagram.png)
+![Przykład schematu](diagram.drawio.png)
