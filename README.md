@@ -106,7 +106,10 @@ W bibliography.bib umieszczamy definicję źródła. Jeśli dostęp był interne
 ### Terminy i definicje
 
 - Wszystkie pojęcia powinny być jak najbardziej spolszczone. Piszemy nazwę polską, a jeśli chcemy podać nazwę angielską, podajemy ją w nawiasie.
-  - Przykład: agenci generatywni (ang. \textit{generative agents})
+  - Przykład: agenci generatywni (ang. _generative agents_)
+  ```tex
+  agenci generatywni (ang. \textit{generative agents})
+  ```
 - W pracy dyplomowej należy podawać definicję terminu, przy pierwszym jego użyciu. Nie należy stosować skrótów nazw metod albo firm itp., bez wcześniejszego rozwinięcia ich znaczenia.
   - Przykład: AOP (Aspect-Orineted-Programming) to...
 
