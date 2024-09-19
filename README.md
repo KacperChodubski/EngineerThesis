@@ -21,7 +21,7 @@ sudo apt install texlive-full
 
 ## Skąd brać publikacje
 
-- https://scholar.google.com/
+- https://typeset.io/
 - https://scholar.google.com/
 - https://pg.edu.pl/biblioteka-pg/e-zasoby/bazy-danych
 
