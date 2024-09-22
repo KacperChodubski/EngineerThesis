@@ -5,6 +5,7 @@
 - [Formatowanie pracy](#formatowanie-pracy)
   - [Tabele](#tabele)
   - [Rysunki](#rysunki)
+  - [Równania](#równania)
   - [Źródła](#źródła)
 - [Styl pracy](#styl-pracy)
   - [Forma bezosobowa](#forma-bezosobowa)
@@ -65,31 +66,54 @@ Prosty przykład prezentuje Rysunek ~\ref{fig:swiat}.
 \end{figure}
 ```
 
+### Równania
+
+Również trzeba dać odwołanie do równania.
+
+```tex
+przykład przedstawia Równanie ~\ref{eq:przyklad1}.
+
+\begin{equation}
+  \mathcal{O(K,B,C,R)}
+  \label{eq:przyklad1}
+\end{equation}
+```
+
 ### Źródła
 
 W tekście umieszczamy odnośnik do źródła/źródeł.
 
 ```tex
 ~\cite{publikacja1,publikacja2}
-Algorytm euklidesa ~\cite{publikacja3} służy do...
+Algorytm euklidesa~\cite{publikacja3} służy do...
 ```
 
-W bibliography.bib umieszczamy definicję źródła. Jeśli dostęp był internetowy, należy podać datę dostępu.
+W bibliography.bib umieszczamy definicję źródła. Jeśli dostęp był internetowy, należy podać datę dostępu. Sprawdzajcie, czy nie ma gotowych cytowań do skopiowania, np. na arxiv.org jest po prawej "Export BibTeX citation".
 
 ```tex
+@misc{park2023generativeagentsinteractivesimulacra,
+    title         = {Generative Agents: Interactive Simulacra of Human Behavior},
+    author        = {Joon Sung Park and Joseph C. O'Brien and Carrie J. Cai and Meredith Ringel Morris and Percy Liang and Michael S. Bernstein},
+    year          = {2023},
+    eprint        = {2304.03442},
+    archiveprefix = {arXiv},
+    primaryclass  = {cs.HC},
+    url           = {https://arxiv.org/abs/2304.03442}
+}
+
 @article{publikacja1,
-   author   =  {{Tom Alphin}},
-   title    =  "2019 Most Common LEGO Parts \url{https://brickarchitect.com/2019/2019-most-common-lego-parts/}",
-   urldate  =  "2021-05-06",
+    author   =  {{Tom Alphin}},
+    title    =  "2019 Most Common LEGO Parts \url{https://brickarchitect.com/2019/2019-most-common-lego-parts/}",
+    urldate  =  "2021-05-06",
 }
 
 @book{boinski2007kaskbook,
-  title={{Architektura portalu dziedzinowego}},
-  author={Boiński, T.},
-  journal={Praca zbiorowa Katedry Architektury Systemów Komputerowych KASKBOOK},
-  year={2008},
-  publisher={Katedra Architektury Systemów Komputerowych, Wydział ETI Politechnika Gdańskiej},
-  pages={81--92}
+    title={{Architektura portalu dziedzinowego}},
+    author={Boiński, T.},
+    journal={Praca zbiorowa Katedry Architektury Systemów Komputerowych KASKBOOK},
+    year={2008},
+    publisher={Katedra Architektury Systemów Komputerowych, Wydział ETI Politechnika Gdańskiej},
+    pages={81--92}
 }
 ```
 
