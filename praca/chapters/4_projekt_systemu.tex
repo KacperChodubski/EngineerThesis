@@ -25,6 +25,7 @@ A to jest paragraf. On również nie jest domyślnie numerowany i nie występuje
 
 
 \section{Architektura serwera i warstwy logicznej}
+\label{sec:architektura_serwera}
 
 \subsection{Agenci}
 
@@ -63,9 +64,24 @@ Wspomnienia uzyskują wynik zgodnie ze wzorem:
 
 
 
-\section{Komendy dla modeli językowych}
+\section{Polecenia dla modeli językowych}
 
-Jakość odpowiedzi generowanych przez duże modele językowe w znacznym stopniu zależy od zapytań, które są do nich wysyłane. Tekst przekazywany do modelu nazywany jest komendą (ang. \textit{prompt}), której główną częścią jest pytanie lub polecenie opisujące, co model powinien wykonać. W przypadku techniki RAG w skład komendy wchodzi także kontekst, czyli tekst ukazujący szerszą perspektywę danego tematu. W samym poleceniu zawarta jest także informacja dla modelu, aby ten, podczas odpowiadania na pytanie lub wykonywania postawionego mu zadania, korzystał bezpośrednio z dostarczonego mu kontekstu - jeżeli jakaś informacja w nim nie występuje, model powinien jasno zakomunikować, że nie jest w stanie odpowiedzieć na pytanie. Nie powinien próbować wymyślać odpowiedzi jedynie na podstawie własnej wiedzy.
+% przenieść do teorii 
+Jakość odpowiedzi generowanych przez duże modele językowe w znacznym stopniu zależy od~zapytań, które są do nich wysyłane. Tekst przekazywany do modelu nazywany jest poleceniem (ang. \textit{prompt}), którego główną częścią jest pytanie lub zadanie opisujące, co model powinien wykonać. W przypadku techniki RAG w skład polecenia wchodzi także kontekst, czyli tekst ukazujący szerszą perspektywę danego tematu. W~samym zadaniu zawarta jest także informacja dla modelu, aby ten, podczas odpowiadania na pytanie lub wykonywania postawionego mu zadania, korzystał bezpośrednio z dostarczonego mu kontekstu - jeżeli jakaś informacja w nim nie występuje, model powinien jasno zakomunikować, że nie jest w stanie odpowiedzieć na pytanie. Nie powinien próbować wymyślać odpowiedzi jedynie na podstawie własnej wiedzy.
+
+\subsection{Wykonywanie akcji}
+
+W aplikacji SMIS, podobnie jak w programie, na którym wzorowana jest jej implementacja~\cite{park2023generativeagentsinteractivesimulacra}, każda decyzja dotycząca przebiegu rozgrywki podejmowana jest za pomocą dużego modelu językowego. W~ujęciu ogólnym, na podstawie otrzymanych odpowiedzi, wykonywane są odpowiednie akcje. Kiedy rozpoczyna się dzień, dla każdego agenta generowany jest godzinowy plan dnia, bazujący na~jego zainteresowaniach i jego trybie życia. Agent przeżywa dzień zgodnie z tym planem. Ponadto, przy~każdym spotkaniu z inną osobą, model językowy decyduje, czy agenci powinni nawiązać konwersację. Jeśli decyzja jest pozytywna, tworzona jest konwersacja, która nawiązuje do~wspomnień rozmówców oraz jest zgodna z~ich osobowościami. Po zakończeniu rozmowy jest ona podsumowywana i generowane są wspomnienia dla obu agentów, które zapisywane są w~ich pamięci. Dzięki temu mogą się oni do nich odwoływać w odpowiednich do tego momentach.
+
+Przy tworzeniu polecenia dla modelu, pobierane są informacje i wspomnienia odnoszące się do~konkretnego agenta. Żeby proces ten mógł nastąpić, należy podczas zapisywania wspomnienia uwzględnić trzy metryki, opisane szerzej w Podrozdziale \ref{sec:architektura_serwera}. Metryka ważności również opiera się na odpowiedzi od modelu.
+
+\subsection{Konwersacje}
+
+Tworzenie konwersacji jest dość skomplikowanym procesem. Aby jak najbardziej upodobnić agentów do prawdziwych ludzi, generowanie rozmowy podzielone zostało na kilka etapów.
+
+Pierwszym z nich jest decydowanie, czy agent powinien w ogóle podjąć konwersację. Warto zauważyć, że my również nie odzywamy się do każdej miniętej na ulicy osoby - w takiej sytuacji nie udawałoby nam się nigdzie dotrzeć, gdyż cały dzień wypełniony byłby jedynie rozmowami z innymi. Podświadomie oceniamy, czy warto przywitać się z daną osobą. Czynniki, jakie są w takiej sytacji brane pod uwagę, to m.in. to, kim jest spotkany człowiek, czy go znamy, co w danym momencie robi, czy nie jest zajęty.
+
+Podobnie działają agenci w aplikacji SMIS.
 
 
 
