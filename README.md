@@ -7,6 +7,8 @@
   - [Rysunki](#rysunki)
   - [Równania](#równania)
   - [Źródła](#źródła)
+  - [Twarda spacja](#twarda-spacja)
+  - [Dzielenie wyrazów](#dzielenie-wyrazów)
 - [Styl pracy](#styl-pracy)
   - [Forma bezosobowa](#forma-bezosobowa)
   - [Autor rozdziału/podrozdziału](#autor-rozdziału-podrozdziału)
@@ -19,6 +21,8 @@
 ```
 sudo apt install texlive-full
 ```
+
+Używamy xelatex (ew. lualatex), bo pdflatex i latex nie potrafią skompilować fontu Arial.
 
 ## Skąd brać publikacje
 
@@ -115,6 +119,20 @@ W bibliography.bib umieszczamy definicję źródła. Jeśli dostęp był interne
     publisher={Katedra Architektury Systemów Komputerowych, Wydział ETI Politechnika Gdańskiej},
     pages={81--92}
 }
+```
+
+### Twarda spacja
+
+Aby uniknąć tzw. sierot (pojedynczych znaków na końcu wiersza), używamy twardej spacji, czyli zamiast zwykłej spacji wstawaimy tyldę. Dzięki temu słowa będą "sklejone" (linia nie zostanie złamana pomiędzy tymi słowami). Używamy przed wszytskimi krókimi wyrazami, np. w, z, na, o, do, poza, za itp.
+```tex
+dokument, w~którym
+```
+
+### Dzielenie wyrazów
+
+Jeśli chcemy wymusić dzielenie wyrazu na końcu linii w konkretnym miejsu, używamy \\- w miejscu podziału. Latex takiego ukośnika nie wydrukuje dopóty, dopóki rzeczywiście w tym miejscu nie zostanie wykonane przeniesienie części wyrazu. Możliwe jest dodanie wielu podziałów w jednym wyrazie. Użyte wtedy zostanie to, które spowoduje wygenerowania „najładniejszego” tekstu.
+```tex
+chcemy wymusić prze\-nie\-sie\-nie w jednym z tych miejsc
 ```
 
 ## Styl pracy
