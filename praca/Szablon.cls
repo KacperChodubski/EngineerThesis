@@ -260,8 +260,8 @@
 \usepackage{fontspec}
 \setmainfont{Arial}
 \setsansfont{Arial}
-% \usepackage{tabularx}
-% \usepackage{float}
+\usepackage{tabularx}
+\usepackage{float}
 
 
 % Zablokowanie przeskakiwania figur (tabel, obrazków) między sekcjami
