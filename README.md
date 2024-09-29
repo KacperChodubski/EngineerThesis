@@ -22,7 +22,7 @@
 sudo apt install texlive-full
 ```
 
-Używamy xelatex (ew. lualatex), bo pdflatex i latex nie potrafią skompilować fontu Arial.
+Używamy lualatex (ew. xelatex), bo pdflatex i latex nie potrafią skompilować fontu Arial.
 
 ## Skąd brać publikacje
 
