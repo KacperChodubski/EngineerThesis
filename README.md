@@ -34,10 +34,10 @@ Używamy lualatex (ew. xelatex), bo pdflatex i latex nie potrafią skompilować 
 
 ### Tabele
 
-Każda tabela musi być przywołana w tekście pracy za pomocą \ref (ref wstawia tylko numer, więc przed trzeba napisać słowo "Tabela").
+Każda tabela musi być przywołana w tekście pracy za pomocą \ref (ref wstawia tylko numer, więc przed trzeba napisać słowo "tabela").
 
 ```tex
-Prosty przykład jest pokazany w Tabeli~\ref{tab:tab1}.
+Prosty przykład jest pokazany w tabeli~\ref{tab:tab1}.
 
 \begin{table}[h]
 \caption{Opis tabelki}
@@ -57,10 +57,10 @@ Prosty przykład jest pokazany w Tabeli~\ref{tab:tab1}.
 
 ### Rysunki
 
-Każdy rysunek musi być przywołany w tekście pracy za pomocą \ref (ref wstawia tylko numer, więc przed trzeba napisać słowo "Rysunek").
+Każdy rysunek musi być przywołany w tekście pracy za pomocą \ref (ref wstawia tylko numer, więc przed trzeba napisać słowo "rysunek").
 
 ```tex
-Prosty przykład prezentuje Rysunek~\ref{fig:swiat}.
+Prosty przykład prezentuje rysunek~\ref{fig:swiat}.
 
 \begin{figure}[htbp]
     \centering
@@ -72,15 +72,25 @@ Prosty przykład prezentuje Rysunek~\ref{fig:swiat}.
 
 ### Równania
 
-Również trzeba dać odwołanie do równania, ale za pomocą \eqref. Wtedy numer otoczony będzie nawiasami.
+Podajemy równanie oraz wyjaśnienie symboli (można z jednostkami).
 
 ```tex
-przykład przedstawia Równanie~\eqref{eq:przyklad1}.
-
 \begin{equation}
-  \mathcal{O(K,B,C,R)}
-  \label{eq:przyklad1}
+    E = mc^2
+    \label{eq:einstein}
 \end{equation}
+gdzie:
+\begin{itemize}
+    \item $E$ - energia (w dżulach),
+    \item $m$ - masa (w kilogramach),
+    \item $c$ - prędkość światła w próżni (w metrach na sekundę).
+\end{itemize}
+```
+
+Jeśli checmy odwołać się do równania, robimy to za pomocą \eqref. Wtedy numer otoczony będzie nawiasami.
+
+```tex
+Zgodnie z równaniem~\eqref{eq:przyklad1} wartość energii...
 ```
 
 ### Źródła

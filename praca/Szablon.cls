@@ -133,7 +133,7 @@
 
 % section
 \titleformat{\section}                          % see (h2)
-{\fontsize{11pt}{22pt}\selectfont\bfseries\itshape}
+{\fontsize{12pt}{24pt}\selectfont\bfseries}
 {\thesection.\quad}
 {0pt}
 {#1}
@@ -141,11 +141,19 @@
 
 % subsection
 \titleformat{\subsection}                       % see (h3)
-{\normalfont\itshape}
+{\fontsize{12pt}{24pt}\selectfont\bfseries\itshape}
 {\thesubsection.\quad}
 {0pt}
 {#1}
 \titlespacing{\subsection}{0pt}{12pt}{6pt}
+
+% paragraph
+\titleformat{\paragraph}
+{\fontsize{11pt}{22pt}\selectfont\itshape}
+{\theparagraph}
+{0pt}
+{#1}
+\titlespacing{\paragraph}{0pt}{6pt}{6pt}
 
 %--------------------------------------------------------------------
 % TOC (see (toc1)-(toc3)
