@@ -251,17 +251,18 @@
 \RequirePackage{subfig}
 
 % Use Arial font
-% \usepackage{fontspec}
-% \setmainfont{Arial}
-% \setsansfont{Arial}
-% \usepackage{fontspec}
-\usepackage{tabularx}
-\usepackage{float}
-% \setromanfont[
-%     BoldFont=fonts/arialbd.ttf,
-%     ItalicFont=fonts/ariali.ttf,
-%     BoldItalicFont=fonts/arialbi.ttf
-% ]{fonts/arial.ttf}
+\usepackage{fontspec}
+\setromanfont[
+	BoldFont=fonts/arialbd.ttf,
+	ItalicFont=fonts/ariali.ttf,
+	BoldItalicFont=fonts/arialbi.ttf
+]{fonts/arial.ttf}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+% \usepackage{tabularx}
+% \usepackage{float}
+
 
 % Zablokowanie przeskakiwania figur (tabel, obrazków) między sekcjami
 \usepackage[section]{placeins} 
