@@ -34,10 +34,10 @@ Używamy lualatex (ew. xelatex), bo pdflatex i latex nie potrafią skompilować 
 
 ### Tabele
 
-Każda tabela musi być przywołana w tekście pracy za pomocą ~\ref (ref wstawia tylko numer, więc przed trzeba napisać słowo "Tabela").
+Każda tabela musi być przywołana w tekście pracy za pomocą \ref (ref wstawia tylko numer, więc przed trzeba napisać słowo "Tabela").
 
 ```tex
-Prosty przykład jest pokazany w Tabeli ~\ref{tab:tab1}.
+Prosty przykład jest pokazany w Tabeli~\ref{tab:tab1}.
 
 \begin{table}[h]
 \caption{Opis tabelki}
@@ -57,10 +57,10 @@ Prosty przykład jest pokazany w Tabeli ~\ref{tab:tab1}.
 
 ### Rysunki
 
-Każdy rysunek musi być przywołany w tekście pracy za pomocą ~\ref (ref wstawia tylko numer, więc przed trzeba napisać słowo "Rysunek").
+Każdy rysunek musi być przywołany w tekście pracy za pomocą \ref (ref wstawia tylko numer, więc przed trzeba napisać słowo "Rysunek").
 
 ```tex
-Prosty przykład prezentuje Rysunek ~\ref{fig:swiat}.
+Prosty przykład prezentuje Rysunek~\ref{fig:swiat}.
 
 \begin{figure}[htbp]
     \centering
@@ -72,10 +72,10 @@ Prosty przykład prezentuje Rysunek ~\ref{fig:swiat}.
 
 ### Równania
 
-Również trzeba dać odwołanie do równania.
+Również trzeba dać odwołanie do równania, ale za pomocą \eqref. Wtedy numer otoczony będzie nawiasami.
 
 ```tex
-przykład przedstawia Równanie ~\ref{eq:przyklad1}.
+przykład przedstawia Równanie~\eqref{eq:przyklad1}.
 
 \begin{equation}
   \mathcal{O(K,B,C,R)}
@@ -88,7 +88,7 @@ przykład przedstawia Równanie ~\ref{eq:przyklad1}.
 W tekście umieszczamy odnośnik do źródła/źródeł.
 
 ```tex
-~\cite{publikacja1,publikacja2}
+\cite{publikacja1,publikacja2}
 Algorytm euklidesa~\cite{publikacja3} służy do...
 ```
 
