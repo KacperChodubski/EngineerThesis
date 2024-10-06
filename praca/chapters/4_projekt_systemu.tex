@@ -3,10 +3,30 @@
 tekst, tu już typowo o naszej implementacji (porównywać do papieru), na początku krótki opis że dzieli sie na front i backend i model
 
 
-\section{Interfejs gry}
+\section{Interfejs gry \textit{Kacper Konopka}}
 
-cały opis unity, za co odpowiada, jakie są interakcje, animacje
+% cały opis unity, za co odpowiada, jakie są interakcje, animacje
+Aby przedstawić świat, w którym operują agenci stworzone zostały interfejsy ułatwiające interpretacje przez człowieka. Dzięki nim osoba uczestnicząca jest w stanie zaobserwować zachowania agentów jako grę. Do stworzenia takiego środowiska użyto silnik do gier Unity, który zawiera wiele elementów interaktywnych pozwalających zarówno tworzyć agentów jak i zobaczyć ich aktualny stan. Oprócz części, w których obserwator może wpływać na środowisko są również te, które prezentują elementy otoczenia np. drzewa, domy bądź rzeki.
 
+\subsection{Elementy interaktywne}
+Celem stworzenia imersji obserwator ma możliwość ingerowania w świat agentów poprzez następujące elementy.
+\subsubsection{Interfejs tworzenia nowych agentów}
+W ramach udostęnienia możliwości tworzenia nowych agentów stworzono okno, w którym użytkownik wprowadza informacje na temat agenta. Każde z pól - imię (ang. \textit{Name}), wiek (ang. \textit{Age}), opis agenta (ang. \textit{Description}) oraz styl życia (ang. \textit{Lifestyle}) musi zostać wypełnione aby agenta stworzyć. W przeciwnym przypadku przy naciśnięciu przycisku \textit{Submit} gra poinformuje nas o tym, że jedno z tych pól jest puste a agent nie zostanie stworzony. Oprócz wypełnienia informacji tekstowych możemy również wybrać wygląd agenta spośród uprzednio stworzonych zasobów. Gdy użytkownik nie wybierze modelu postaci, dobierany jest pierwszy zasób z listy. Aby zakończyć tworzenie agenta użytkownik musi nacisnąć przycisk \textit{Submit}. Gdy wszystkie wyżej wymienione warunki są spełnione agent pojawia się na środku mapy.
+Wypełniony interfejs prezentuje rysunek~\ref{fig:createagent}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/411.png}
+    \caption{Rysunek przedstawiający przykładowy, prawidłowo wypełniony interfejs tworzenia agenta.}
+    \label{fig:createagent}
+\end{figure}
+\subsubsection{Interfejs stanu agenta}
+Ważnym elementem obserwacji działania agentów jest wyświetlanie ich stanu. W tym celu stworzono interfejs, który wyświetla podstawowe informacje o agencie. Aby uzyskać informacje o agencie należy kliknąć na agenta, który znajduje się w polu widzenia. W skład danych, które znajdują się w oknie znajdują się elementy takie jak - aktualna data i godzina wydarzeń, identyfikator agenta, imię (ang. \textit{Name}), wiek (ang. \textit{Age}), opis agenta (ang. \textit{Description}) oraz styl życia (ang. \textit{Lifestyle}). Przrykładowy stan agenta ukazany jest w rysunku~\ref{fig:stateagent}. Okno interfejsu stanu agenta jest półprzezroczyste, przez co można zauważyć niektóre elementy środowiska, które nie przeszkadzają w interpretacji przedstawionych danych.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth, height=0.6\textheight]{images/411state.png}
+    \caption{Rysunek przedstawiający przykładowy interfejs stanu agenta.}
+    \label{fig:stateagent}
+\end{figure}
 
 
 \section{Architektura serwera i warstwy logicznej}
@@ -33,9 +53,9 @@ odległości cosinusowej wektorów stworzonych przez model typu encoder.
 
 \paragraph{Metryka ważności}
 Metryka istoty jest uzyskiwana
-poprzez ocenę ważności danego wydarzenia w kontekście życia agenta przez LLM.
+poprzez ocenę ważności danego wydarzenia w kontekście życia agenta przez LLM.
 Metryka odpowiada na pytanie jak ważne dla danego agenta w skali od 1 do 10 jest
-dane wydarzenie np. pościelenie łóżka będzie miało skalę bliską 1, gdzie wzięcie
+dane wydarzenie np. pościelenie łóżka będzie miało skalę bliską 1, gdzie wzięcie
 ślubu skalę bliską 10.
 
 \paragraph{Metryka niedawności}
