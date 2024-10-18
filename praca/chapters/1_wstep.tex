@@ -1,19 +1,18 @@
-\chapter{WSTĘP I CEL PRACY (\textit{Alicja Wagner})}
+\chapter{WSTĘP I CEL PRACY}
 \label{chap:introduction}
-% Wstępu wstępu - tutaj należy pokrótce opisać o co chodzi w pracy i wyraźnie wskazać cel pracy!
+% Wstęp - tutaj należy pokrótce opisać o co chodzi w pracy i wyraźnie wskazać cel pracy!
 
 % Wstęp i cel pracy nakreśla problematykę opisaną lub rozwiązywaną w pracy dyplomowej wraz z uzasadnieniem celowości jej realizacji. Podaje cel i ewentualnie tezę (hipotezę). Syntetycznie opisuje dotychczasowe dokonania w danej tematyce, założenia techniczne oraz może zwięźle przedstawić zawartość poszczególnych rozdziałów. W przypadku pracy realizowanej przez kilku studentów, przy omawianiu zawartości rozdziałów należy podać ich autorów. Punkty stanowiące element składowy podrozdziału powinny być opracowane przez jednego autora
 
 W ostatnich latach coraz częściej zaczęto wykorzystywać duże modele językowe (ang. \textit{LLM, Large Language Model}) w aplikacjach obejmujących różne sektory. Duże zainteresowanie sztuczną inteligencją zaowocowało jej szybkim rozwojem, co sprzyjało powstawaniu nowych pomysłów dla~zastosowań przetwarzania języka naturalnego.
 
-Powstała także technika Retrieval-Augumented Generation (RAG), dzięki której możliwe jest podanie modelowi językowemu kontekstu, co zapobiega halucynacjom. Za jej pomocą można odwoływać się do poprzednich wiadomości lub zasilić model danymi, do których wcześniej nie miał dostępu. Otwiera to nowe możliwości tworzenia tekstu na podstawie konkretnych treści. Ponadto, jest to rozwiązanie o wiele tańsze i szybsze niż dotrenowywanie modeli, nie mówiąc już o trenowaniu ich od podstaw.
+Powstała także technika Retrieval-Augumented Generation (RAG), dzięki której możliwe jest podanie modelowi językowemu kontekstu, co zapobiega halucynacjom. Za jej pomocą można odwoływać się do poprzednich wiadomości lub zasilić LLM danymi, do których wcześniej nie miał dostępu. Otwiera to nowe możliwości tworzenia tekstu na podstawie konkretnych treści. Ponadto, jest to rozwiązanie o wiele tańsze i szybsze niż dotrenowywanie modeli, nie mówiąc już o trenowaniu ich od podstaw.
 
-Symulowanie ludzkich zachowań staje się coraz bardziej realistyczne dzięki zastosowaniu innowacyjnych technologii. Można upodabniać zachowanie modeli do zachowania człowieka poprzez odwzorowywanie czynności takich jak percepcja, zpamiętywanie, planowanie i rozumowanie. Technika RAG ułatwia tworzenie angażujących i realistycznych scenariuszy.
+Symulowanie ludzkich zachowań staje się coraz bardziej realistyczne dzięki zastosowaniu innowacyjnych technologii. Można upodabniać zachowanie modeli do zachowania człowieka poprzez odwzorowywanie czynności takich jak percepcja, zapamiętywanie, planowanie i rozumowanie. Technika RAG ułatwia tworzenie angażujących i realistycznych scenariuszy.
 
 
 \section{Motywacja}
 
-% dlaczego akurat taki temat, czemu warto coś robić w tej dziedzinie
 
 \subsection{Dynamiczny rozwój dziedziny}
 
@@ -21,9 +20,27 @@ W przeciągu ostatnich kilkudziesięciu lat dało się zaobserwować intensywny 
 
 Jednym z podobszarów sztucznej inteligencji jest przetwarzanie języka naturalnego (ang. \textit{NLP, Natural Language Processing}). Dziedzina ta zajmuje się przekształcaniem języka zrozumiałego dla człowieka na taki, który jest zrozumiały dla komputera. Dzięki temu można w stosunkowo łatwy sposób analizować, generować i przetwarzać tekst. Znaczącą rolę odgrywają tutaj także duże modele językowe, które w ostatniej dekadzie dynamicznie się rozwijały. Największą popularność zyskały, gdy w listopadzie 2022 roku firma OpenAI uruchomiła ChatGPT-3.5. Czatbot ten od samego początku cieszył się ogromnym zainteresowaniem. W niespełna tydzień korzystało z niego ponad milion użytkowników\cite{ChatGPT2024}.
 
-W dobrze przemyślanym i zbudownaym systemie możliwe jest nawet generowanie nowych poziomów gier wideo. Jednak jak w wielu aplikacjach wykorzystujących wytrenowane modele, efekty są mocno uzależnione od jakości danych\cite{Todd_2023}.
+Rozwój, w kontekście wykorzystywania dużych modeli językowych, miał miejsce także w branży gier komputerowych. W dobrze przemyślanym i zbudownaym systemie możliwe jest nawet generowanie nowych poziomów gier wideo. Jednak, jak w wielu aplikacjach wykorzystujących wytrenowane modele, efekty są mocno uzależnione od jakości danych\cite{Todd_2023}. Wyniki zwracane przez takie systemy odzwierciedlają precyzję przekazywanych do nich promptów. Jeżeli podane będzie zbyt ogólne lub niedokładne polecenie, LLM nie wygeneruje oczekiwanej treści - odpowiedź może być niepełna lub całkowicie odbiegać od tematu. Takie błędy mogą prowadzić do niezadowolenia graczy i frustracji twórców. Tworzenie obrazów, które są przez ludzi uznawane za realistyczne, czy po prostu ciekawe, jest dla modeli zadaniem niezwykle trudnym. Obecnie dużo lepiej wypada generowanie tekstu. Dostępnych jest coraz więcej LLM-ów, które mają wiele miliardów parametrów, co pozwala im precyzyjnie odpowiadać na pytania i wytwarzać sensowne treści. Dzięki zaawansowanej architekturze, modelowi transformera i ogromnej ilości danych, na których były trenowane, są w stanie wyłapywać szczegóły i dostosowywać się do kontekstu. Sprawia to, że ich odpowiedzi są bardziej trafne i~zrozumiałe.
+
+\subsection{Nowe możliwości}
+
+\subsubsection{Duże modele językowe}
+
+Temat dużych modeli językowych stał się bardzo popularny. Jeszcze kilkadziesiąt lat temu nie do pomyślenia był fakt, że będzie można rozmawiać z komputerem za pomocą języka naturalnego, na dodatek bez wymogu posiadania specjalistycznej wiedzy o sztucznej inteligencji. Teraz każdy człowiek może wybrać jeden z szeroko dostępnych w internecie modeli językowych i przetestować jego możliwości. Przykłady wykorzystania takiego rozwiązania to generowanie tekstu, tłumaczenie treści, podsumowywanie długich dokumentów oraz analiza sentymentu.
+
+Wiele LLM-ów jest oprogramowaniem otwartym (ang. \textit{open-source software}), co ułatwia także wykorzystywanie ich w kodzie własnej aplikacji. Wystarczy wybrać konkretny model, specjalizujący się w zadaniu, do którego ma być zastosowany, i wkomponować jego wywołania w kod źródłowy. Dzięki otwartości oprogramowania nie jest wymagane używanie żadnego klucza API. Nie trzeba nawet wysyłać danych na zewnętrzny serwer - jeśli tylko posiada się własną maszynę z odpowiednimi zasobami pamięciowymi i obliczeniowymi, można umieścić na niej model, który będzie odseparowany od sieci globalnej oraz nieautoryzowanych dostępów. Jest to rozwiązanie szczególnie istotne dla firm posiadających wrażliwe dane, dla których ważna jest prywatność i bezpieczeństwo. Przechowywanie i przetwarzanie danych lokalnie zmniejsza ryzyko wycieku informacji.
+
+\subsubsection{Retrieval-Augumented Generation}
+
+Nowe możliwości dotyczące NLP otworzyła także technika RAG. Po raz pierwszy została ona opisana przez Patricka Lewisa i jego zespół w 2020 roku\cite{lewis2021retrievalaugmentedgeneration}. Ta stosunkowo młoda technika pozwala na współpracę z modelem językowym i zewnętrznymi danymi. Można dzięki temu bez trenowania modelu korzystać z treści, których ten model wcześniej nie znał. Jest to ciekawa alternatywa dla znanego już wcześniej procesu trenowania modelu. W technice RAG tkwi ogromny potencjał tworzenia dynamicznych aplikacji, wymagających dostępu do zmieniających się i ciągle rozbudowywanych danych. Kiedy zasoby tak szybko się zmieniają, nieefektywne byłoby trenowanie na nich LLM-u. Po pierwsze proces ten jest bardzo kosztowny i czasochłonny, a trzeba by go było wykonywać bardzo często, aby mieć aktualne dane. Po drugie, tempo zmian danych mogłoby przewyższać tempo samego trenowania systemu, przez co w ogóle nie byłoby możliwe osiągnięcie stanu, w którym dane byłyby w stu procentach aktualne.
+
+RAG ma także inne zalety. Wiąże się on z większą dokładnością odpowiedzi, ogranicza halucynacje i sprawia, że system go wykorzystujący jest bardziej skalowalny. Oprócz pozytywnych cech, RAG wiąże się także z wieloma wyzwaniami. Architektura systemu robi się dużo bardziej skomplikowana niż w przypadku czystego modelu LLM. Ponadto, wyszukiwanie odpowiednich informacji w dużych bazach danych może wymagać znacznych zasobów obliczeniowych, co może przekładać się na dłuższy czas uzyskiwania odpowiedzi. Ważne jest także odpowiednie przygotowanie kontektu i zarządzanie nim, aby jak najlepiej dostosować go do pytania.
+
+Technika ta z pewnością będzie rozwijana w nadchodzących latach, a wiele osób już teraz bada jej potencjał. Jest to dziedzina, którą warto zgłębiać i być na bieżąco z aktualnymi odkryciami i rozwiązaniami. W świecie, w którym coraz częściej słyszy się o sztucznej inteligencji, trudno zignorować ten temat. Warto zbadać, czy faktycznie duże modele językowe potrafią naśladować ludzi i jak realistyczne będą konwersacje generowane przez system wykorzystujący technikę RAG.
 
 
 \section{Cel pracy}
 
-co chcemy zrobić, implementacja papieru
+\subsection{Inspiracja}
+
+tekst
